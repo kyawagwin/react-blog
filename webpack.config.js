@@ -11,5 +11,14 @@ module.exports = {
         path: __dirname + '/public/dist',
         filename: 'bundle.js',
         publicPath: '/dist/'
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          loaders: loaders,
+          exclude: /node_modules/
+        }
+      ]
     }
 };
